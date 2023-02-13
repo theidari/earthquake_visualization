@@ -13,3 +13,9 @@ they lack a meaningful way of displaying it. In this challenge, you have been ta
 a way to visualize USGS data that will allow them to better educate the public and other government 
 organizations (and hopefully secure more funding) on issues facing our planet.
 <p>
+
+The instructions for this activity are broken into two parts:
+
+Part 1: Create the Earthquake Visualization
+
+Part 2: Gather and Plot More Data
