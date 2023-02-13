@@ -1,3 +1,8 @@
+:root {
+  /* colors */
+  --o-blue: #3e5e7e;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -7,4 +12,7 @@ body {
 body,
 html {
   height: 100%;
+}
+.navbar{
+  background: var(--o-blue);
 }
