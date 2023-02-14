@@ -5,8 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Leaflet Step-1</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Latest Earthquakes</title>
+  <link rel="icon" href="https://earthquake.usgs.gov/earthquakes/map/favicon.ico" type="image/icon type">
+
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+
 
   <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
@@ -21,15 +26,141 @@
   <nav class="navbar navbar-expand-sm">
     <div class="container-fluid">
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+        <li class="nav-item logo">
+          <img src="./asset/USGS_logo.svg" alt="USGS" height="30px">
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+      </ul>
+    </div>
+    <div class="container-fluid d-flex align-items-center justify-content-end">
+      <ul class="navbar-nav">
+        <li class="nav-item logo">
+          <a href="https://github.com/theidari" target="_blank">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg" alt="github" width="25px">
+          </a>
+        </li>
+        <li class="nav-item logo">
+          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#setting">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Simple_Globe.svg" alt="map" width="25px">
+          </button>    
+        </li>
+        <li class="nav-item logo">
+          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#setting">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Gear_icon_svg.svg" alt="setting" width="25px">
+          </button>    
+        </li>
+        <li class="nav-item logo">
+          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/archive/d/d9/20110302085513%21Icon-round-Question_mark.svg" alt="about" width="25px">
+          </button>    
         </li>
       </ul>
     </div>
   </nav>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <h5 class="modal-title" id="exampleModalLabel">About</h5>
+          <p class="about-pop">Explore further insights on the "Latest Earthquakes" application in the sections below.</p><br>
+          <!-- accordion start-->
+          <div class="accordion" id="myAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Using the Application 
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#myAccordion">
+                <div class="accordion-body">
+                  <!-- navigation -->
+                  <h6>Navigation</h6>
+                  <table>
+                    <tr>
+                      <td><img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg" alt="github" width="20px"></td>
+                      <td>Click icon for project <b>Github repository</b>.</td>
+                    </tr>
+                    <tr>
+                      <td><img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Simple_Globe.svg" alt="map" width="20px"></td>
+                      <td>Click icon for loading latest earthquakes <b>map</b>.</td>
+                    </tr>
+                    <tr>
+                      <td><img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Gear_icon_svg.svg" alt="setting" width="20px"></td>
+                      <td> <b>setting</b> icon lets you change which earthquakes are displayed.</td>
+                    </tr>
+                  </table>
+                  <!-- map -->
+                  <h6>map</h6>
+                  <table>
+                    <th>Display</th>
+                    <tr>
+                      <td>
+                        <ul>
+                          <li><b>Software:</b> Interactive map interface powered by <a href="">Leaflet</a>.</li>
+                        </ul>
+                      </td>
+                    </tr>
+                  </table>
+                  <table>
+                    <th>Markers</th>
+                    <tr>
+                      <td>
+                        <ul>
+                          <li><b>Shape:</b> Earthquakes are plotted on the map as circles and non-earthquakes are plotted as diamonds (in most browsers). For users of older browsers, all events may be plotted as squares.</li>
+                          <li><b>Size:</b> Earthquake sizes are relative to the magnitude of the seismic event. The markers will scale depending on your device type and the zoom level of the map.</li>
+                          <li><b>Color:</b></li>
+                        </ul>
+                      </td>
+                    </tr>
+                  </table>
+                  <!-- setting -->
+                  <h6>setting</h6>
+                  <hr>
+                  <ul>
+                    <li>Display</li>
+                    <li>Markers</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                  Contact Us
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#myAccordion">
+                <div class="accordion-body">
+                  <!-- feedback -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- accordion end -->
+        </div>
+        <div class="modal-footer">
+          <table>
+            <tr>
+              <td>© 2023 Ali T. Heidari | Mapping Project | University of Toronto</td>
+            </tr>
+            <tr>
+                  <td>
+                    <a href="https://www.linkedin.com/in/theidari/" target="_blank">
+                      <img src="https://simpleicons.org/icons/linkedin.svg">
+                    </a>
+                    <a href="https://github.com/theidari" target="_blank">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg" alt="github">
+                    </a>
+                    <a href="mailto:theidari.ali@gmail.com" target="_blank">
+                      <img src="https://simpleicons.org/icons/gmail.svg" alt="gmail">
+                    </a>
+                  </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- The div that holds our map -->
   <div id="map"></div>
 

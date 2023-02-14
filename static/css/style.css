@@ -1,6 +1,21 @@
+/* google fonts */
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display"); 
+@import url("https://fonts.googleapis.com/css?family=Lato");
+@import url("href='https://fonts.googleapis.com/css?family=Roboto");
+
 :root {
   /* colors */
-  --o-blue: #3e5e7e;
+  --o-blue    : #3e5e7e;
+  --m-white   : #ffffff;
+  --m-gray    : #f2f2f2;
+  --m-black   : #000000;
+  --d-gray    : #666565;
+  --s-gray    : #888888;
+
+  /* fonts */
+  --font-lato : 'Lato';
+  --font-playfair-display: 'Playfair Display';
+  --font-roboto: 'Roboto'
 }
 
 body {
@@ -13,6 +28,103 @@ body,
 html {
   height: 100%;
 }
+
 .navbar{
   background: var(--o-blue);
 }
+
+.logo {
+  filter: invert(99%) sepia(0%) saturate(0%) hue-rotate(200deg) brightness(100%) contrast(104%);
+  padding-right: 10px;
+  margin:0 0 0 0 ;
+}
+
+.btn {
+  padding: 0 0 0 0;
+}
+
+.modal-content {
+  border-radius: 0;
+  background: var(--m-gray);
+  margin-left: auto;
+}
+
+.modal-dialog {
+  width: 435px;
+  position:fixed;
+  top: 18px;
+  right:0;
+  left:auto;
+  bottom:auto;
+}
+.modal-title {
+  font-family: var(--font-playfair-display);
+  font-weight:700;
+}
+/* about */
+.about-pop {
+  font-family: var(--font-lato);
+  font-size: 14px;
+}
+
+/* accordion */
+.accordion-button {
+  font-family: var(--font-lato);
+}
+.accordion-button:not(.collapsed) {
+  color: inherit;
+  background-color: var(--m-gray);
+  color: var(--o-blue);
+  font-family: var(--font-lato);
+  font-weight: 500;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion-body h6 {
+  font-family: var(--font-lato);
+  font-size: 14px;
+  color: var(--m-white);
+  border: 1px groove var(--o-blue);
+  border-radius: 5px;
+  box-shadow: 2px 4px 100px var(--s-gray) ;
+  background: var(--o-blue);
+  text-align: center;
+  text-transform: uppercase;
+  height: 20px;
+  margin-top: 10px;
+}
+
+.accordion-body td,tbody,tr,th {
+  font-family: var(--font-lato);
+  font-size: 12px;
+  color: var(--m-black);
+  text-align: start;
+  padding-right: 5px;
+  padding-top: 5px;
+}
+
+.accordion-body li {
+  text-align: justify;
+}
+
+.modal-footer {
+  align-items: center;
+  justify-content: center;
+}
+.modal-footer td,tbody,tr {
+  font-size: 12px;
+  color: var(--d-gray);
+  text-align: center;
+}
+.modal-footer a {
+  filter: invert(42%) sepia(0%) saturate(2%) hue-rotate(347deg) brightness(93%) contrast(94%);
+  height: 30px;
+  width: 30px;
+  padding-right: 10px;
+  display:inline-block;
+  font-size: 0;
+}
+
