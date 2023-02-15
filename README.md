@@ -52,24 +52,26 @@ Part 2: Gather and Plot More Data
                 "code":"73845786",
                 "ids":",nc73845786,",
                 "sources":",nc,",
-							"types":",nearby-cities,origin,phase-data,",
-							"nst":10,
-							"dmin":0.01262,
-							"rms":0.02,
-							"gap":86,
-							"magType":"md",
-							"type":"earthquake",
-							"title":"M 0.8 - 8km NW of The Geysers, CA"
-				},
-				"geometry":{
-							"type":"Point",
-							"coordinates":[
-											-122.8181686,
-											38.8343315,
-											2.09
-											]
-				},
-				"id":"nc73845786"
+		"types":",nearby-cities,origin,phase-data,",
+		"nst":10,
+		"dmin":0.01262,
+		"rms":0.02,
+		"gap":86,
+		"magType":"md",
+		"type":"earthquake",
+		"title":"M 0.8 - 8km NW of The Geysers, CA"
 			},
-            
+		"geometry":{
+		"type":"Point",
+		"coordinates":[
+			-122.8181686,
+			38.8343315,
+			2.09
+			]},
+		"id":"nc73845786"
+		},
+		...,
+		{}
+		]
+}           
 ``` 
