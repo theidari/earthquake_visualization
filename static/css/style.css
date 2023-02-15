@@ -23,7 +23,9 @@ body {
   margin: 0;
 }
 
-#map,
+#map{
+  height: 96.5%;
+}
 body,
 html {
   height: 100%;
@@ -106,8 +108,23 @@ html {
   padding-top: 5px;
 }
 
-.accordion-body li {
+.accordion-body li,p {
   text-align: justify;
+}
+
+.btn-feedback {
+  text-decoration: none;
+  background-color: var(--o-blue);
+  color: var(--m-white);
+  padding: 2px 2px 2px 2px;
+  border-radius: 5px;
+}
+
+.btn-feedback:hover {
+  background-color: var(--m-white);
+  color: var(--m-black);
+  font-weight: bold;
+  border: 1px groove var(--d-gray);
 }
 
 .modal-footer {
