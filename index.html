@@ -34,7 +34,7 @@
     <div class="container-fluid d-flex align-items-center justify-content-end">
       <ul class="navbar-nav">
         <li class="nav-item logo">
-          <a href="https://github.com/theidari" target="_blank">
+          <a href="https://github.com/theidari/earthquake_visualization" target="_blank">
             <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg" alt="github" width="25px">
           </a>
         </li>
@@ -44,12 +44,12 @@
           </button>    
         </li>
         <li class="nav-item logo">
-          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#setting">
+          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#settingModal">
             <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Gear_icon_svg.svg" alt="setting" width="25px">
           </button>    
         </li>
         <li class="nav-item logo">
-          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#aboutModal">
             <img src="https://upload.wikimedia.org/wikipedia/commons/archive/d/d9/20110302085513%21Icon-round-Question_mark.svg" alt="about" width="25px">
           </button>    
         </li>
@@ -57,11 +57,23 @@
     </div>
   </nav>
   <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <!-- setting -->
+  <div class="modal fade" id="settingModal" tabindex="-1" aria-labelledby="settingModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-body">
-          <h5 class="modal-title" id="exampleModalLabel">About</h5>
+          <h5 class="modal-title" id="settingModalLabel">Setting</h5>
+          <p class="about-pop">Explore further insights on the "Latest Earthquakes" application in the sections below.</p><br>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- about -->
+  <div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <h5 class="modal-title" id="aboutModalLabel">About</h5>
           <p class="about-pop">Explore further insights on the "Latest Earthquakes" application in the sections below.</p><br>
           <!-- accordion start-->
           <div class="accordion" id="myAccordion">

@@ -26,6 +26,14 @@ body {
 #map{
   height: 96.5%;
 }
+.map-popup {
+  color: var(--m-white);
+  background: var(--o-blue);
+  border-radius: 2px;
+  font-family: var(--font-lato);
+  font-size: 10;
+  text-transform: capitalize;
+}
 body,
 html {
   height: 100%;
@@ -144,4 +152,18 @@ html {
   display:inline-block;
   font-size: 0;
 }
+
+/* leaflet control panel */
+.leaflet-control-layers {
+  border:0px solid var(--m-black);
+  border-radius: 50%;
+  background-color: var(--o-blue);
+}
+.leaflet-control-layers-expanded {
+  border:0px solid var(--m-black);
+  border-radius: 0%;
+  background-color: var(--m-white);
+  width: 200px;
+}
+
 
