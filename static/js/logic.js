@@ -1,17 +1,12 @@
-// Store our API endpoint as queryUrl.
-var all_month_url="https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson"
-var all_week_url ="https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson"
-var all_day_url  ="https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson"
+import { all_day_url } from './urls.js';
 
-
-// Perform a GET request to the query URL/
-d3.json(all_day_url).then(function (data) {
+// Perform a GET request to the query URL
+d3.json(all_day_url).then(function(data) {
   // Once we get a response, send the data.features object to the createFeatures function.
   createFeatures(data.features);
 });
 
 function createFeatures(earthquakeData) {
-
   // Define a function that we want to run once for each feature in the features array.
   // Give each feature a popup that describes the place and time of the earthquake.
   function onEachFeature(feature, layer) {
@@ -29,7 +24,6 @@ function createFeatures(earthquakeData) {
 }
 
 function createMap(earthquakes) {
-
   // Create the base layers.
   var street = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -69,31 +63,6 @@ function createMap(earthquakes) {
     attribution: 'Map data &copy; <a href="https://stamen.com/">Stamen</a>',
     maxZoom: 16
   })
-
-  // // Conditionals for country gdp_pc
-  // var color = "";
-  // if (countries[i].gdp_pc > 100000) {
-  //   color = "yellow";
-  // }
-  // else if (countries[i].gdp_pc > 75000) {
-  //   color = "blue";
-  // }
-  // else if (countries[i].gdp_pc > 50000) {
-  //   color = "green";
-  // }
-  // else {
-  //   color = "violet";
-  // }
-
-  // // Add circles to the map.
-  // L.circle(countries[i].location, {
-  //   fillOpacity: 0.75,
-  //   color: "white",
-  //   fillColor: color,
-  //   // Adjust the radius.
-  //   radius: Math.sqrt(countries[i].gdp_pc) * 500
-  // }).addTo(myMap);
-
 
   // Create a baseMaps object.
   var baseMaps = {
