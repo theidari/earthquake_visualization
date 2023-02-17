@@ -10,8 +10,10 @@
   --m-white   : #ffffff;
   --m-gray    : #f2f2f2;
   --m-black   : #000000;
+  --l--black  : #00000044;
   --d-gray    : #666565;
   --s-gray    : #888888;
+  --m-red     : #f10808;
 
   /* fonts */
   --font-lato : 'Lato';
@@ -28,13 +30,44 @@ body {
   height: 96.5%;
 }
 .map-popup {
-  color: var(--m-white);
-  background: var(--o-blue);
-  border-radius: 2px;
-  font-family: var(--font-lato);
-  font-size: 10;
-  text-transform: capitalize;
+  font-family: var(--font-playfair-display);
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 500;
+  width: 340px;
 }
+.map-popup-warning {
+  background-color: var(--m-white);
+  color: var(--m-red);
+  border: 1px solid var(--m-black);
+  border-radius: 2px;
+  padding: 5px 5px 5px 5px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  font-family: var(--font-lato);
+  width: 340px;
+}
+
+.map-popup-exp {
+  font-size: 14px;
+  line-height: 2;
+}
+.map-popup-exp span{
+  color: var(--o-blue);
+  font-weight: 700;
+}
+
+.leaflet-popup-content-wrapper {
+  background-color: var(--m-gray);
+  border-radius: 5px;
+  font-family: var(--font-lato);
+  font-size: 12px;
+  width: 380px;
+  justify-content: center;
+}
+
 body,
 html {
   height: 100%;
@@ -159,16 +192,79 @@ html {
   border:0px solid var(--m-black);
   border-radius: 50%;
   background-color: var(--o-blue);
+  width : 50px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
 }
 .leaflet-control-layers-expanded {
   border:0px solid var(--m-black);
   border-radius: 0%;
   background-color: var(--m-white);
   width: 200px;
+  height: 220px;
   color: var(--m-black);
   font-size: 14px;
   font-family: var(--font-lato);
-  
 }
 
+/* Custom CSS for the easy button */
+.easy-button-container {
+  position: absolute;
+  bottom: -60px;
+  right: 0px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
 
+#legend-button {
+  background-color: var(--o-blue);
+  font-weight: bold;
+  border-radius: 50%;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0px;
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  justify-content: center;
+  align-items: center;
+}
+
+#legend-button:hover {
+  background-color: var(--s-gray);
+}
+
+.button-keys {
+  padding-right: 10px;
+  filter: invert(74%) sepia(2%) saturate(11%) hue-rotate(352deg) brightness(89%) contrast(83%);
+  transform: rotate(-90deg);
+}
+
+.legend {
+  font-family: var(--font-lato);
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--m-black);
+  background-color: var(--m-white);
+  padding: 10px;
+  border: 3px solid var(--l--black);
+  justify-content: center;
+  width: 200px;
+} 
+
+.legend p{
+  font-family: var(--font-lato);
+  font-size: 16px;
+  color: var(--m-black);
+  font-weight: 700;
+  text-align: center
+}
