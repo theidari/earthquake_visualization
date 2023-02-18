@@ -16,10 +16,11 @@ organizations (and hopefully secure more funding) on issues facing our planet.
 
 The instructions for this activity are broken into two parts:
 
-Part 1: Create the Earthquake Visualization
+- Part 1: Create the Earthquake Visualization<br>
+- Part 2: Gather and Plot More Data
 
-Part 2: Gather and Plot More Data
 
+<b>sample:<b>
 ```JSON
 {
 "type":"FeatureCollection",
@@ -70,7 +71,7 @@ Part 2: Gather and Plot More Data
 			]},
 		"id":"nc73845786"
 		},
-		...,
+		..,
 		{}
 		]
 }           
